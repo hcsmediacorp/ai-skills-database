@@ -1,0 +1,3 @@
+import type {Metadata} from "next"; import "./globals.css"; import {Providers} from "@/components/providers"; import {SiteNav} from "@/components/site-nav";
+export const metadata:Metadata={metadataBase:new URL("https://ai-skills-database.vercel.app"),title:{default:"AI Skills Database",template:"%s | AI Skills Database"},description:"A public library of markdown skills for humans and AI models.",openGraph:{title:"AI Skills Database",description:"Curated markdown skills for humans and AI models",type:"website"}};
+export default function RootLayout({children}:{children:React.ReactNode}){return <html lang="en" suppressHydrationWarning><body><Providers><SiteNav/><main>{children}</main></Providers></body></html>}
